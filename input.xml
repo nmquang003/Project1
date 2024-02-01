@@ -1,0 +1,27 @@
+<net>
+    <edge id="E0" from="J2" to="J3" priority="-1">
+        <lane id="E0_0" index="0" allow="pedestrian" speed="13.89" length="9.03" width="2.00" shape="-12.50,8.30 -3.48,8.30"/>
+        <lane id="E0_1" index="1" disallow="pedestrian" speed="4.00" length="9.03" shape="-12.50,10.90 -3.47,10.90"/>
+    </edge>
+    <edge id="E1" from="J3" to="J4" priority="-1">
+        <lane id="E1_0" index="0" allow="pedestrian" speed="13.89" length="5.30" width="2.00" shape="0.00,8.30 5.30,8.30"/>
+        <lane id="E1_1" index="1" disallow="pedestrian" speed="4.00" length="5.30" shape="0.00,10.90 5.30,10.90"/>
+    </edge>
+    <edge id="E2" from="J4" to="J5" priority="-1">
+        <lane id="E2_0" index="0" allow="pedestrian" speed="13.89" length="5.30" width="2.00" shape="16.70,19.70 16.70,25.00"/>
+        <lane id="E2_1" index="1" disallow="pedestrian" speed="4.00" length="5.30" shape="14.10,19.70 14.10,25.00"/>
+    </edge>
+    <edge id=":J4_5" function="internal">
+        <lane id=":J4_5_0" index="0" disallow="pedestrian" speed="4.00" length="14.19" shape="5.30,10.90 9.15,11.45 11.90,13.10 13.55,15.85 14.10,19.70"/>
+    </edge>
+    <edge id="MyEdge_for_testing" function="internal">
+        <lane id="MyEdge_for_testing_0" index="0" disallow="pedestrian" speed="4.00" length="14.19" shape="0,0 3,0 3,3 2,3 2,2 1,2 1,1 0,1"/>
+    </edge>
+    <edge id="E298" from="J273" to="J274" priority="-1">
+        <lane id="E298_0" index="0" allow="pedestrian" speed="13.89" length="10.50" width="2.00" shape="589.50,-16.70 600.00,-16.70"/>
+        <lane id="E298_1" index="1" disallow="pedestrian" speed="4.00" length="10.50" shape="589.50,-14.10 600.00,-14.10"/>
+    </edge>
+    <connection from="E1" to="E2" fromLane="1" toLane="1" via=":J4_5_0" dir="l" state="m"/>
+    <junction id="J2" type="dead_end" x="-12.50" y="12.50" incLanes="-E0_0 -E0_1" intLanes="" shape="-12.50,12.50 -12.50,17.70 -12.50,12.50" customShape="1"/>
+    <junction id="J274" type="dead_end" x="600.00" y="-12.50" incLanes="E298_0 E298_1" intLanes="" shape="600.00,-12.50 600.00,-17.70 600.00,-12.50"/>
+</net>
